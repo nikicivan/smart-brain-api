@@ -4,10 +4,10 @@ const bcrypt = require('bcrypt-nodejs');
 const cors = require('cors');
 const knex = require('knex');
 
-const register = require('./controllers/Register');
-const signin = require('./controllers/Signin');
-const profile = require('./controllers/Profile');
-const image = require('./controllers/Image');
+const register = require('./Controllers/Register');
+const signin = require('./Controllers/Signin');
+const profile = require('./Controllers/Profile');
+const image = require('./Controllers/Image');
 
 
 const db = knex({
