@@ -8,7 +8,6 @@ const register = require('./Controllers/Register');
 const signin = require('./Controllers/Signin');
 const profile = require('./Controllers/Profile');
 const image = require('./Controllers/Image');
-process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
 
 const db = knex({
 	client: 'pg',
@@ -30,7 +29,7 @@ app.get('/profile/:id', (req,res) => {profile.handleProfile(req, res, db)});
 app.put('/image', (req,res) => {image.handleImage(req, res, db)});
 app.post('/imageurl', (req,res) => {image.handleApiCall(req, res)});
 
-app.listen(process.env.PORT || 3001, () => {
+app.listen(process.env.PORT, () => {
 	console.log(`app is running on port ${process.env.PORT}`);
 });
 
