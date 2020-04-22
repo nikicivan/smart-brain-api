@@ -9,8 +9,6 @@ const signin = require('./Controllers/Signin');
 const profile = require('./Controllers/Profile');
 const image = require('./Controllers/Image');
 
-process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
-
 const db = knex({
 	client: 'pg',
 	connection: {
@@ -20,11 +18,6 @@ const db = knex({
 });
 
 const app = express();
-
-/*app.use((req,res,next) => {
-	res.heder('Access-Control-Allow-Origin', process.env.ORIGIN ||'*');
-	next();
-})*/
 
 app.use(cors());
 app.use(bodyParser.json());
