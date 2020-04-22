@@ -21,12 +21,12 @@ const db = knex({
 
 const app = express();
 
-app.use((req,res,next) => {
+/*app.use((req,res,next) => {
 	res.heder('Access-Control-Allow-Origin', process.env.ORIGIN ||'*');
 	next();
-})
+})*/
 
-/*app.use(cors());*/
+app.use(cors());
 app.use(bodyParser.json());
 
 
