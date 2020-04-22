@@ -17,7 +17,7 @@ const db = knex({
 	}
 });
 
-db.connect();
+//db.connect();
 
 const app = express();
 
