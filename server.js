@@ -17,6 +17,8 @@ const db = knex({
 	}
 });
 
+const router = express.Router();
+
 //db.connect();
 
 const app = express();
